@@ -1,0 +1,32 @@
+.categories{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  padding:30px;
+}
+
+.cat-card{
+  border:1px solid #ddd;
+  border-radius:12px;
+  overflow:hidden;
+  text-align:center;
+  text-decoration:none;
+  color:black;
+  background-color: white;
+  box-shadow:0 4px 12px rgba(0,0,0,0.12);
+  transition: 0.3s;
+  background: white;
+}
+.cat-card:hover {
+    transform: translateY(-5px);
+}
+
+.cat-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.cat-card h3{
+  padding:10px;
+}
