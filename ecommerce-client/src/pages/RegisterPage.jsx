@@ -12,7 +12,7 @@ name: "",
 email: "",
 password: "",
 });
-
+const [showPassword, setShowPassword] = useState(false);
 const handleChange = (e) => {
 setFormData({
 ...formData,
@@ -71,12 +71,29 @@ return (
     />
 
     <input
-      type="password"
-      name="password"
-      placeholder="Password"
-      value={formData.password}
-      onChange={handleChange}
-    />
+  type={showPassword ? "text" : "password"}
+  name="password"
+  placeholder="Password"
+  value={formData.password}
+  onChange={handleChange}
+/>
+<label
+  style={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "8px",
+    margin: "10px 0",
+    cursor: "pointer",
+  }}
+>
+  <input
+    type="checkbox"
+    checked={showPassword}
+    onChange={() => setShowPassword(!showPassword)}
+  />
+  Show Password
+</label>
 
     <p className="auth-link">
       Already have an account?

@@ -67,8 +67,16 @@ const [showPassword,setShowPassword] = useState(false);
   value={formData.password}
   onChange={handleChange}
 />
-
-<label style={{ display: "block", marginTop: "10px" }}>
+<label
+  style={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "8px",
+    margin: "10px 0",
+    cursor: "pointer",
+  }}
+>
   <input
     type="checkbox"
     checked={showPassword}
