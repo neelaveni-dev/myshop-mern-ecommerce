@@ -4,7 +4,7 @@ import "./LoginPage.css";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
-
+  const [shoePassword,setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -67,7 +67,24 @@ const LoginPage = () => {
           value={formData.password}
           onChange={handleChange}
         />
+       const [showPassword, setShowPassword] = useState(false);
 
+<input
+  type={showPassword ? "text" : "password"}
+  name="password"
+  placeholder="Password"
+  value={formData.password}
+  onChange={handleChange}
+/>
+
+<label>
+  <input
+    type="checkbox"
+    checked={showPassword}
+    onChange={() => setShowPassword(!showPassword)}
+  />
+  Show Password
+</label> 
         <button type="submit">
           Login
         </button>
