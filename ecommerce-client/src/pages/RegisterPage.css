@@ -64,3 +64,6 @@ input::placeholder{
     transform: translateY(-2px);
     transition: 0.3s;
 }
+input:not([type="checkbox"]) {
+  width:100%;
+}
