@@ -5,7 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 const CheckoutPage = () => {
 const navigate = useNavigate();
+const user = localStorage.getItem("user")
 
+if (!user) {
+  navigate("?login");
+  return null;
+}
   const [formData, setFormData] = useState({
     name: "",
     address: "",
