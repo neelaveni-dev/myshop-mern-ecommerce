@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./CheckoutPage.css";
 import { useNavigate } from "react-router-dom";
 
 
 const CheckoutPage = () => {
 const navigate = useNavigate();
-const user = localStorage.getItem("user")
 
-if (!user) {
-  navigate("?login");
-  return null;
-}
+useEffect(() => {
+  const user = localStorage.getItem("user");
+
+  if (!user) {
+    navigate("/login");
+  }
+}, [navigate]);
   const [formData, setFormData] = useState({
     name: "",
     address: "",
