@@ -77,23 +77,14 @@ return (
   value={formData.password}
   onChange={handleChange}
 />
-<label
-  style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "8px",
-    margin: "10px 0",
-    cursor: "pointer",
-  }}
->
+<div className="show-password">
   <input
     type="checkbox"
     checked={showPassword}
     onChange={() => setShowPassword(!showPassword)}
   />
-  Show Password
-</label>
+  <span>Show Password</span>
+</div>
 
     <p className="auth-link">
       Already have an account?
